@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Prueba.DAL.sucursal>
+@{
+    ViewBag.Title = "ListaSucursal";
+}
+
+<h2>ListaSucursal</h2>
+
+<table class="table-fill">
+    <thead>
+    <th>Nombre</th>
+    <th>Ubicacion</th>
+    <th>Telefono</th>
+    </thead>
+
+    <tbody">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nombre</td>
+                <td>@item.ubicacion</td>
+                <td>@item.telefono </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

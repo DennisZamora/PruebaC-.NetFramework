@@ -1,0 +1,12 @@
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\Prueba.BLL.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\Prueba.BLL.pdb
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\Prueba.DAL.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\EntityFramework.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\Prueba.DAL.pdb
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\Prueba.DAL.dll.config
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\bin\Debug\EntityFramework.xml
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\obj\Debug\Prueba.BLL.csproj.AssemblyReference.cache
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\obj\Debug\Prueba.BLL.csproj.CoreCompileInputs.cache
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\obj\Debug\Prueba.BLL.csproj.CopyComplete
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\obj\Debug\Prueba.BLL.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.BLL\obj\Debug\Prueba.BLL.pdb

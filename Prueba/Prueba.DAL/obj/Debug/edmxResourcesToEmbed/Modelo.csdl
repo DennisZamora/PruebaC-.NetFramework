@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibreriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bitacora">
+    <Key>
+      <PropertyRef Name="id_bitacora" />
+    </Key>
+    <Property Name="id_bitacora" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="libro" Relationship="Self.PK_LIBRO_categoria" FromRole="categoria" ToRole="libro" />
+  </EntityType>
+  <EntityType Name="libro">
+    <Key>
+      <PropertyRef Name="id_libro" />
+    </Key>
+    <Property Name="id_libro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="autor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="precio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="id_sucursal" Type="Int32" Nullable="false" />
+    <Property Name="id_categoria" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="categoria" Relationship="Self.PK_LIBRO_categoria" FromRole="libro" ToRole="categoria" />
+    <NavigationProperty Name="sucursal" Relationship="Self.PK_LIBRO_SUCURSAL" FromRole="libro" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="sucursal">
+    <Key>
+      <PropertyRef Name="id_sucursal" />
+    </Key>
+    <Property Name="id_sucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="libro" Relationship="Self.PK_LIBRO_SUCURSAL" FromRole="sucursal" ToRole="libro" />
+  </EntityType>
+  <Association Name="PK_LIBRO_categoria">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="1" />
+    <End Role="libro" Type="Self.libro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="libro">
+        <PropertyRef Name="id_categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PK_LIBRO_SUCURSAL">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="1" />
+    <End Role="libro" Type="Self.libro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="id_sucursal" />
+      </Principal>
+      <Dependent Role="libro">
+        <PropertyRef Name="id_sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibreriaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bitacora" EntityType="Self.bitacora" />
+    <EntitySet Name="categoria" EntityType="Self.categoria" />
+    <EntitySet Name="libro" EntityType="Self.libro" />
+    <EntitySet Name="sucursal" EntityType="Self.sucursal" />
+    <AssociationSet Name="PK_LIBRO_categoria" Association="Self.PK_LIBRO_categoria">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="libro" EntitySet="libro" />
+    </AssociationSet>
+    <AssociationSet Name="PK_LIBRO_SUCURSAL" Association="Self.PK_LIBRO_SUCURSAL">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="libro" EntitySet="libro" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

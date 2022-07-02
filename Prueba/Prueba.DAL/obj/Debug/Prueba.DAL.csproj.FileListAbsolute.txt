@@ -1,0 +1,12 @@
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\Prueba.DAL.dll.config
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\Prueba.DAL.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\Prueba.DAL.pdb
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\EntityFramework.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\EntityFramework.xml
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\obj\Debug\Prueba.DAL.csproj.AssemblyReference.cache
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\obj\Debug\Prueba.DAL.csproj.CoreCompileInputs.cache
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\obj\Debug\Prueba.DAL.csproj.CopyComplete
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\obj\Debug\Prueba.DAL.dll
+D:\Universidad\Macho\PruebaC-.NetFramework\Prueba\Prueba.DAL\obj\Debug\Prueba.DAL.pdb
