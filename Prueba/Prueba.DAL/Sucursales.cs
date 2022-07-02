@@ -33,30 +33,28 @@ namespace Prueba.DAL
             }
         }
 
-        public List<sucursal> ListaSucursal2()
+        public sucursal registro(sucursal nuevaSucursal)
         {
             try
             {
                 using (var context = new LibreriaEntities())
                 {
-                    var lista = (from x in context.sucursal
-                                 select x).ToList();
-
-                    if (lista.Count > 0)
-                    {
-                        return lista;
-                    }
-                    else
-                    {
-                        List<sucursal> listaVacia = new List<sucursal>();
-                        return listaVacia;
-                    }
+                    //LinQ
+                    sucursal sucursal = new sucursal();
+                    sucursal.nombre = nuevaSucursal.nombre;
+                    sucursal.ubicacion = nuevaSucursal.ubicacion;
+                    sucursal.telefono = nuevaSucursal.telefono;
+                    context.sucursal.Add(sucursal);
+                    context.SaveChanges();
+                    return sucursal;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+
+                throw;
             }
+            
         }
 
     }
