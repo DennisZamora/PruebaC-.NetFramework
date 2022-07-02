@@ -32,6 +32,20 @@ namespace Prueba.Controllers
             
         }
 
-        
+        public ActionResult Registro()
+        {
+            try
+            {
+                return View();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+
     }
 }
